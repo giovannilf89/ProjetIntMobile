@@ -7,12 +7,6 @@ export default styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  logo: {
-    fontSize: 25,
-    marginBottom: 50,
-    backgroundColor: "#23e3f3",
-    marginTop: 20,
-  },
   login: {
     fontSize: 25,
     marginBottom: 20,
@@ -32,7 +26,7 @@ export default styles = StyleSheet.create({
     padding: 2,
   },
   buttonact: {
-    backgroundColor: "#23e3f3",
+    backgroundColor: "#52a1c1",
     padding: 10,
     borderRadius: 5,
     alignItems: "center",
@@ -46,6 +40,7 @@ export default styles = StyleSheet.create({
     alignItems: "center",
     width: 100,
     margin: 15,
+    marginBottom: -8,
   },
   title: {
     fontSize: 25,
@@ -71,6 +66,7 @@ export default styles = StyleSheet.create({
   },
   textoMenu: {
     fontSize: 23,
+    textAlign: "center",
   },
   grupoMenu: {
     margin: 15,
@@ -81,7 +77,7 @@ export default styles = StyleSheet.create({
     borderRadius: 5,
     width: 70,
     marginBottom: 20,
-    alignItems: 'center',
+    alignItems: "center",
     marginTop: 10,
   },
   select: {
@@ -113,12 +109,12 @@ export default styles = StyleSheet.create({
   },
   fundo1: {
     alignItems: "center",
-    backgroundColor: "#23e3f3",
+    backgroundColor: "#52a1c1",
     borderTopStartRadius: 5,
     borderTopEndRadius: 5,
-    marginRight: -20,
-    marginLeft: -20,
-    marginTop: -20,
+    marginRight: -19.7,
+    marginLeft: -19.76,
+    marginTop: -19.7,
     padding: 10,
     borderBottomWidth: 1,
   },
@@ -134,7 +130,7 @@ export default styles = StyleSheet.create({
   },
   fundo4: {
     alignItems: "center",
-    backgroundColor: "#23e3f3",
+    backgroundColor: "#52a1c1",
     borderTopStartRadius: 5,
     borderTopEndRadius: 5,
     marginRight: -20,
@@ -154,10 +150,10 @@ export default styles = StyleSheet.create({
   fundoCad1: {
     borderTopStartRadius: 9,
     borderTopEndRadius: 9,
-    backgroundColor: "#23e3f3",
+    backgroundColor: "#52a1c1",
     padding: 12,
     borderBottomWidth: 1,
-    marginTop: 53,
+    marginTop: 52,
     width: 350,
   },
   fundoCad3: {
@@ -165,6 +161,7 @@ export default styles = StyleSheet.create({
   },
   voltar: {
     marginTop: 15,
+    alignItems: "center",
   },
   cadCentro: {
     flex: 1,
@@ -182,7 +179,7 @@ export default styles = StyleSheet.create({
   dashCad2: {
     borderTopStartRadius: 9,
     borderTopEndRadius: 9,
-    backgroundColor: "#23e3f3",
+    backgroundColor: "#52a1c1",
     width: 340,
     padding: 10,
     alignItems: "center",
@@ -199,7 +196,7 @@ export default styles = StyleSheet.create({
   schedCad1: {
     borderTopStartRadius: 9,
     borderTopEndRadius: 9,
-    backgroundColor: "#23e3f3",
+    backgroundColor: "#52a1c1",
     padding: 12,
     borderBottomWidth: 1,
     margin: -15,
@@ -221,12 +218,12 @@ export default styles = StyleSheet.create({
     borderRadius: 10,
     width: 300,
     position: "fixed",
-    height: 500,
+    height: 400,
   },
-  lSched1:{
+  lSched1: {
     borderTopStartRadius: 9,
     borderTopEndRadius: 9,
-    backgroundColor: "#23e3f3",
+    backgroundColor: "#52a1c1",
     padding: 12,
     borderBottomWidth: 1,
     alignItems: "center",
@@ -243,15 +240,18 @@ export default styles = StyleSheet.create({
     gap: 10,
     borderWidth: 1,
     margin: 10,
-    backgroundColor: '#faf6d0',
+    backgroundColor: "#faf6d0",
     padding: 5,
   },
   buttonCancelAjust: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center",
   },
   titleAgend: {
     fontSize: 20,
-  }
+  },
+  logo: {
+    alignItems: "center",
+  },
 });

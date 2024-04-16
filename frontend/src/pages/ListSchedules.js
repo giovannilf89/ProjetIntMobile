@@ -6,6 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
   View,
+  Image
 } from "react-native";
 import apiDental from "../services/apiDental";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -99,7 +100,16 @@ export default function ListSchedule() {
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
       <>
-        <Text style={styles.logo}>AppDental</Text>
+      <View style={styles.logo}>
+          <Image
+            source={require("../../assets/AppDental.jpg")}
+            style={{
+              width: 200,
+              height: 200,
+              resizeMode: "contain",
+            }}
+          />
+        </View>
         <View style={styles.lSched}>
           <View style={styles.lSched1}>
             <Text style={styles.titleAgend}>Agendamentos</Text>

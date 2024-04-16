@@ -7,6 +7,7 @@ import {
   TextInput,
   ScrollView,
   View,
+  Image,
 } from "react-native";
 import apiDental from "../services/apiDental";
 import { useNavigation } from "@react-navigation/native";
@@ -71,8 +72,18 @@ export default function CadUser() {
     <SafeAreaView style={styles.container}>
       <>
         <StatusBar style="auto" />
-        <Text style={styles.logo}>AppDental</Text>
         <ScrollView>
+          <View style={styles.logo}>
+            <Image
+              source={require("../../assets/AppDental.jpg")}
+              style={{
+                width: 200,
+                height: 200,
+                resizeMode: "contain",
+              }}
+            />
+          </View>
+
           <View style={styles.fundoCad}>
             <View style={styles.fundoCad1}>
               <Text style={styles.cad}>Faça seu cadastro</Text>
@@ -173,17 +184,18 @@ export default function CadUser() {
               </View>
             </View>
           </View>
+
+          <View style={styles.voltar}>
+            <TouchableOpacity
+              style={styles.buttonact}
+              onPress={() => {
+                handleVoltar();
+              }}
+            >
+              <Text>Voltar</Text>
+            </TouchableOpacity>
+          </View>
         </ScrollView>
-        <View style={styles.voltar}>
-          <TouchableOpacity
-            style={styles.buttonact}
-            onPress={() => {
-              handleVoltar();
-            }}
-          >
-            <Text>Voltar</Text>
-          </TouchableOpacity>
-        </View>
       </>
     </SafeAreaView>
   );

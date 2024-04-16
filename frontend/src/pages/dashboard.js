@@ -4,6 +4,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   View,
+  Image
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useEffect, useState } from "react";
@@ -44,7 +45,16 @@ export default function Dashboard() {
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
       <>
-        <Text style={styles.logo}>AppDental</Text>
+        <View style={styles.logo}>
+          <Image
+            source={require("../../assets/AppDental.jpg")}
+            style={{
+              width: 200,
+              height: 200,
+              resizeMode: "contain",
+            }}
+          />
+        </View>
         <Text style={styles.bemVindo}>Seja bem-vindo(a), {user}</Text>
         <View style={styles.dashCad1}>
           <View style={styles.dashCad2}>

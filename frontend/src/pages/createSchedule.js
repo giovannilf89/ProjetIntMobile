@@ -6,6 +6,9 @@ import {
   Alert,
   SafeAreaView,
   View,
+  Image,
+  ScrollView,
+  StatusBar,
 } from "react-native";
 import apiDental from "../services/apiDental";
 import { useNavigation } from "@react-navigation/native";
@@ -146,7 +149,17 @@ export default function CreateSchedule() {
   return (
     <SafeAreaView style={styles.container}>
       <>
-        <Text style={styles.logo}>AppDental</Text>
+        <StatusBar style="auto" />
+        <View style={styles.logo}>
+          <Image
+            source={require("../../assets/AppDental.jpg")}
+            style={{
+              width: 200,
+              height: 200,
+              resizeMode: "contain",
+            }}
+          />
+        </View>
         <View style={styles.schedCad}>
           <View style={styles.schedCad1}>
             <Text>Agendamento</Text>

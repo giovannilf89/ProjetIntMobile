@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   TextInput,
   View,
+  Image,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import apiDental from "../services/apiDental";
@@ -26,7 +27,10 @@ export default function Login() {
 
       await AsyncStorage.setItem("@nome", JSON.stringify(resposta.data.nome));
       await AsyncStorage.setItem("@clientId", JSON.stringify(resposta.data.id));
-      await AsyncStorage.setItem("@tokencli", JSON.stringify(resposta.data.token))
+      await AsyncStorage.setItem(
+        "@tokencli",
+        JSON.stringify(resposta.data.token)
+      );
       navigation.navigate("Dashboard");
       setEmail("");
       setSenha("");
@@ -42,20 +46,27 @@ export default function Login() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
-      <Text style={styles.logo}>AppDental</Text>
+      <Image
+        source={require("../../assets/AppDental.jpg")}
+        style={{
+          width: 200,
+          height: 200,
+          resizeMode: "contain",
+        }}
+      />
       <View style={styles.fundo}>
         <View style={styles.fundo1}>
           <Text style={styles.titleLogin}>Faça seu login</Text>
         </View>
         <View style={styles.inside}>
-          <Text style={styles.inputField}>Email:</Text>
+          <Text style={styles.inputField1}>Email:</Text>
           <TextInput
             style={styles.input}
             placeholder="Digite seu email"
             value={email}
             onChangeText={setEmail}
           />
-          <Text style={styles.inputField}>Senha:</Text>
+          <Text style={styles.inputField1}>Senha:</Text>
           <TextInput
             secureTextEntry={true}
             style={styles.input}
