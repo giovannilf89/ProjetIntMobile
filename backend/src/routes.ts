@@ -18,6 +18,7 @@ import { ListScheduleController } from './controller/Schedule/listScheduleContro
 import { ListUniqueScheduleController } from './controller/Schedule/listUniqueScheduleController'
 import { ListClientScheduleController } from './controller/Schedule/listClientScheduleController'
 import { isAutenticado } from './middleware/isAutenticado'
+import { ListDentistScheduleController } from './controller/Schedule/listDentistScheduleController'
 
 
 
@@ -47,4 +48,6 @@ router.delete('/DeletarAgendamento', isAutenticado, new deleteScheduleController
 router.get('/ListarAgendamentos', new ListScheduleController().handle)
 router.get('/ListarUniqueSchedule/:id', new ListUniqueScheduleController().handle)
 router.get('/ListarClienteAgendamento/:clientId', isAutenticado, new ListClientScheduleController().handle)
+router.get('/ListarDentistaAgendamento/:dentistId', new ListDentistScheduleController().handle)
+router.get('/AgendamentoDetalhes/:id', new ListUniqueScheduleController().handle)
 export { router }

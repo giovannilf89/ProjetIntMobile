@@ -38,7 +38,8 @@ async execute ({email, senha}: AuthDentistLogin){
     return {
         id: dentist.id,
         email: dentist.email,
-        token: token
+        token: token,
+        name: dentist.name
     }
 }
 }
